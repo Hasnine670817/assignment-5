@@ -23,6 +23,8 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'black-1': '#111111',
+                        'black-2': '#111111B2',
                     },
                     fontFamily: {
                         'lexend': "'Lexend', sans-serif",
@@ -32,9 +34,30 @@
         }
     </script>
 </head>
-<body class="font-lexend">
+<body class="font-lexend text-black-1">
 
-    
+    <!-- header-area start here -->
+    <header class="sticky top-0 bg-white">
+        <div class="header-top bg-[#F9F7F3] pt-4 pb-10 md:pt-6 md:pb-16">
+            <div class="lg:max-w-[1140px] container mx-auto px-5 xl:px-0">
+                <div class="flex justify-between items-center">
+                    <button class="bg-[#B4F461] rounded-lg h-10 md:h-12 w-24 md:w-28 text-base md:text-xl font-semibold">Blog</button>
+                    <div class="logo-div">
+                        <a href="#"><img class="inline-block mr-0 sm:mr-3" src="images/donate.png" alt="image"><span class="text-base md:text-xl font-semibold hidden sm:inline-block">Donate Bangladesh</span></a>
+                    </div>
+                    <div class="amount-bdt">
+                        <img class="inline-block mr-1 md:mr-3" src="images/dollar.png" alt="image">
+                        <span class="text-base md:text-xl font-medium text-black-2">5500</span>
+                        <span class="text-base md:text-xl font-medium text-black-2">BDT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom text-center pt-14 pb-7 md:pt-20 md:pb-8">
+            <button class="text-base md:text-xl rounded-lg px-8 h-12 md:h-14 font-semibold bg-[#B4F461] mr-3">Donation</button>
+            <button class="text-base md:text-xl rounded-lg px-8 h-12 md:h-14 font-semibold border border-[#1111114D]">History</button>
+        </div>
+    </header>
     
 </body>
 </html>
