@@ -33,6 +33,8 @@ document.getElementById('donation-button').addEventListener('click', function() 
     const donationArea = tabButtonId('donation-area');
     donationArea.classList.remove('hidden');
 
+    document.getElementById('history-container').classList.add('hidden');
+
 
 });
 
@@ -84,12 +86,12 @@ document.getElementById('donate-button1').addEventListener('click', function(eve
     const div = document.createElement('div');
     div.innerHTML = `
         <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
-            <h3 class="text-xl font-bold mb-4">${donationInput1} Taka Donate for Flood at Noakhali, Bangladesh</h3>
-            <p class="text-base font-light text-black-2">Date : ${dateToday}</p>
+            <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4">${donationInput1} Taka Donate for Flood at Noakhali, Bangladesh</h3>
+            <p class="text-sm md:text-base font-light text-black-2">Date : ${dateToday}</p>
         </div>
     `
     
-    document.getElementById('history-container').appendChild(div);
+    document.getElementById('inr-history-container').appendChild(div);
     
     
 });
@@ -141,12 +143,12 @@ document.getElementById('donate-button2').addEventListener('click', function(eve
     const div = document.createElement('div');
     div.innerHTML = `
         <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
-            <h3 class="text-xl font-bold mb-4">${donationInput2} Taka Donate for Flood Relief in Feni,Bangladesh</h3>
-            <p class="text-base font-light text-black-2">Date : ${dateToday}</p>
+            <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4">${donationInput2} Taka Donate for Flood Relief in Feni,Bangladesh</h3>
+            <p class="text-sm md:text-base font-light text-black-2">Date : ${dateToday}</p>
         </div>
     `
     
-    document.getElementById('history-container').appendChild(div);
+    document.getElementById('inr-history-container').appendChild(div);
     
     
 });
@@ -198,12 +200,12 @@ document.getElementById('donate-button3').addEventListener('click', function(eve
     const div = document.createElement('div');
     div.innerHTML = `
         <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
-            <h3 class="text-xl font-bold mb-4">${donationInput3} Taka Aid for Injured in the Quota Movement</h3>
-            <p class="text-base font-light text-black-2">Date : ${dateToday}</p>
+            <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4">${donationInput3} Taka Aid for Injured in the Quota Movement</h3>
+            <p class="text-sm md:text-base font-light text-black-2">Date : ${dateToday}</p>
         </div>
     `
     
-    document.getElementById('history-container').appendChild(div);
+    document.getElementById('inr-history-container').appendChild(div);
     
     
 });

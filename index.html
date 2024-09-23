@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment - 5</title>
 
+    <!-- FontAwesome - Link -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css" />
+
     <!-- Google - Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +45,7 @@
         <div class="header-top bg-[#F9F7F3] pt-4 pb-10 md:pt-6 md:pb-16">
             <div class="lg:max-w-[1140px] container mx-auto px-5 xl:px-0">
                 <div class="flex justify-between items-center">
-                    <button class="bg-[#B4F461] rounded-lg h-10 md:h-12 w-24 md:w-28 text-base md:text-xl font-semibold">Blog</button>
+                    <button id="blog-btn" class="bg-[#B4F461] rounded-lg h-10 md:h-12 w-24 md:w-28 text-base md:text-xl font-semibold">Blog</button>
                     <div class="logo-div">
                         <a href="#"><img class="inline-block mr-0 sm:mr-3" src="images/donate.png" alt="image"><span class="text-base md:text-xl font-semibold hidden sm:inline-block">Donate Bangladesh</span></a>
                     </div>
@@ -60,7 +64,7 @@
     </header>
 
     <!-- main-area start here -->
-    <main class="bg-white pb-20">
+    <main id="main" class="bg-white pb-20">
         <article id="donation-area">
             <!-- flood - 1 section -->
             <section class="flood-1-section mb-8">
@@ -146,10 +150,21 @@
 
 
     <!-- history-container -->
-    <div id="history-container" class="lg:max-w-[1140px] container mx-auto px-5 xl:px-0 hidden"></div>
+    <div id="history-container" class="hidden bg-white pb-20">
+        <div class="lg:max-w-[1140px] container mx-auto px-5 xl:px-0" id="inr-history-container"></div>
+    </div>
 
     <script src="js/utilities.js"></script>
     <script src="js/scripts.js"></script>
+
+    <script>
+
+        // blog-btn click
+        document.getElementById('blog-btn').addEventListener('click', function() {
+            window.location.href = 'blog.html';
+        });
+
+    </script>
     
 </body>
 </html>

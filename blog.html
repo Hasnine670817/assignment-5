@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - 5</title>
+
+    <!-- FontAwesome - Link -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css" />
+
+    <!-- Google - Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Daisy - UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Tailwind - Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom - Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'black-1': '#111111',
+                        'black-2': '#111111B2',
+                    },
+                    fontFamily: {
+                        'lexend': "'Lexend', sans-serif",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-lexend text-black-1 bg-[#F9F7F3] pb-24 md:pb-36">
+
+    <!-- header-area start here -->
+    <header class="sticky top-0 bg-white">
+        <div class="header-top bg-[#F9F7F3] pt-4 pb-10 md:pt-6 md:pb-16">
+            <div class="lg:max-w-[1140px] container mx-auto px-5 xl:px-0">
+                <div class="flex justify-between items-center">
+                    <button id="home-btn" class="bg-[#B4F461] rounded-lg h-10 md:h-12 w-24 md:w-28 text-base md:text-xl font-semibold">Home</button>
+                    <div class="logo-div">
+                        <a href="#"><img class="inline-block mr-0 sm:mr-3" src="images/donate.png" alt="image"><span class="text-base md:text-xl font-semibold hidden sm:inline-block">Donate Bangladesh</span></a>
+                    </div>
+                    <div class="amount-bdt">
+                        <img class="inline-block mr-1 md:mr-3" src="images/dollar.png" alt="image">
+                        <span id="user-total-amount" class="text-base md:text-xl font-medium text-black-2">5500</span>
+                        <span class="text-base md:text-xl font-medium text-black-2">BDT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="bg-white py-10">
+        <section class="faq-area">
+            <div class="lg:max-w-[1140px] container mx-auto px-5 xl:px-0">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Important faq ?</h2>
+                <div class="accordion-area border border-[#1111111A] rounded-2xl py-6">
+                    <div class="px-4 pb-4 md:px-6 md:pb-6 border-b border-[#1111111A]">
+                        <button id="acc-title1" class="accordion-title w-full text-left text-base md:text-xl font-medium relative pr-6">What is the Document Object Model (DOM)? <i id="angle-down1" class="fa-solid fa-angle-down absolute top-1/2 right-0 -translate-x-1/2 -translate-y-1/2 rotate-180"></i></button>
+                        <div id="acc-content1" class="accordion-content text-black-2 text-sm md:text-base font-normal mt-3">The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</div>
+                    </div>
+                    <div class="px-4 py-4 md:px-6 md:py-6 border-b border-[#1111111A]">
+                        <button id="acc-title2" class="accordion-title w-full text-left text-base md:text-xl font-medium relative pr-6">How do you select an element from the DOM? <i id="angle-down2" class="fa-solid fa-angle-down absolute top-1/2 right-0 -translate-x-1/2 -translate-y-1/2"></i></button>
+                        <div id="acc-content2" class="hidden accordion-content text-black-2 text-sm md:text-base font-normal mt-3">5 ways we can select DOM. They are:- <br>
+                            1. getElementById()<br>
+                            2. getElementsByClassName()<br>
+                            3. getElementsByTagName()<br>
+                            4. querySelector()<br>
+                            5. querySelectorAll()
+                        </div>
+                    </div>
+                    <div class="px-4 py-4 md:px-6 md:py-6 border-b border-[#1111111A]">
+                        <button id="acc-title3" class="accordion-title w-full text-left text-base md:text-xl font-medium relative pr-6">What is event delegation in the context of the DOM, and why is it useful? <i id="angle-down3" class="fa-solid fa-angle-down absolute top-1/2 right-0 -translate-x-1/2 -translate-y-1/2"></i></button>
+                        <div id="acc-content3" class="hidden accordion-content text-black-2 text-sm md:text-base font-normal mt-3">Event delegation refers to the process of using event propagation (bubbles).</div>
+                    </div>
+                    <div class="px-4 pt-4 md:px-6 md:pt-6">
+                        <button id="acc-title4" class="accordion-title w-full text-left text-base md:text-xl font-medium relative pr-6">How do you manipulate an element's attributes and styles using the DOM? <i id="angle-down4" class="fa-solid fa-angle-down absolute top-1/2 right-0 -translate-x-1/2 -translate-y-1/2"></i></button>
+                        <div id="acc-content4" class="hidden accordion-content text-black-2 text-sm md:text-base font-normal mt-3">To manipulate an element's attributes in the DOM, one can use getAttribute() to retrieve values, setAttribute() to modify or add attributes, and Attribute() to remove attributes. For styling, we can access style properties to directly change CSS properties like color or background color.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <script src="js/utilities.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/blog.js"></script>
+
+    <script>
+        // home-btn click 
+        document.getElementById('home-btn').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+    </script>
+    
+</body>
+</html>
