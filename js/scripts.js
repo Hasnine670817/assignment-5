@@ -14,6 +14,8 @@ document.getElementById('history-button').addEventListener('click', function() {
     const donationArea = tabButtonId('donation-area');
     donationArea.classList.add('hidden');
 
+    document.getElementById('history-container').classList.remove('hidden');
+
 });
 
 
@@ -73,6 +75,21 @@ document.getElementById('donate-button1').addEventListener('click', function(eve
     closeInfoButtons.addEventListener('click', function() {
         congratsSection.classList.add('hidden');
     });
+
+
+    // for date and time
+    const dateToday = new Date();
+
+    // for history value
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
+            <h3 class="text-xl font-bold mb-4">${donationInput1} Taka Donate for Flood at Noakhali, Bangladesh</h3>
+            <p class="text-base font-light text-black-2">Date : ${dateToday}</p>
+        </div>
+    `
+    
+    document.getElementById('history-container').appendChild(div);
     
     
 });
@@ -114,7 +131,79 @@ document.getElementById('donate-button2').addEventListener('click', function(eve
     closeInfoButtons.addEventListener('click', function() {
         congratsSection.classList.add('hidden');
     });
+
+
+
+    // for date and time
+    const dateToday = new Date();
+
+    // for history value
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
+            <h3 class="text-xl font-bold mb-4">${donationInput2} Taka Donate for Flood Relief in Feni,Bangladesh</h3>
+            <p class="text-base font-light text-black-2">Date : ${dateToday}</p>
+        </div>
+    `
+    
+    document.getElementById('history-container').appendChild(div);
     
     
 });
 
+
+
+// injured donate calculation
+document.getElementById('donate-button3').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const userTotalAmount = innerTextValueId('user-total-amount');
+    let donationInput3 = inputValueId('donation-input3');
+    const flood3Amount = innerTextValueId('flood3-amount');
+
+    // If the input is empty or not a valid amount
+    if (isNaN(donationInput3) || donationInput3 < 1) {
+        alert("Please enter a valid amount");
+        return;
+    }
+
+    // If the amount becomes more than the total amount
+    if (userTotalAmount < donationInput3) {
+        alert("You don't have enough money");
+        return;
+    }
+
+    // Calculate donateFlood2
+    const donateForFlood3 = flood3Amount + donationInput3;
+    document.getElementById('flood3-amount').innerText = donateForFlood3;
+    
+    // Calculate totalAmount
+    const newUserTotalAmount = userTotalAmount - donationInput3;
+    document.getElementById('user-total-amount').innerText = newUserTotalAmount;
+
+    const congratsSection = document.getElementById('congrats-section');
+    congratsSection.classList.remove('hidden');
+
+    const closeInfoButtons = document.getElementById('close-info-btn1');
+    closeInfoButtons.addEventListener('click', function() {
+        congratsSection.classList.add('hidden');
+    });
+
+
+
+    // for date and time
+    const dateToday = new Date();
+
+    // for history value
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <div class="border border-[#1111111A] rounded-2xl p-5 md:p-8 mb-6">
+            <h3 class="text-xl font-bold mb-4">${donationInput3} Taka Aid for Injured in the Quota Movement</h3>
+            <p class="text-base font-light text-black-2">Date : ${dateToday}</p>
+        </div>
+    `
+    
+    document.getElementById('history-container').appendChild(div);
+    
+    
+});
