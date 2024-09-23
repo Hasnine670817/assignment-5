@@ -47,7 +47,7 @@
                     </div>
                     <div class="amount-bdt">
                         <img class="inline-block mr-1 md:mr-3" src="images/dollar.png" alt="image">
-                        <span class="text-base md:text-xl font-medium text-black-2">5500</span>
+                        <span id="user-total-amount" class="text-base md:text-xl font-medium text-black-2">5500</span>
                         <span class="text-base md:text-xl font-medium text-black-2">BDT</span>
                     </div>
                 </div>
@@ -72,12 +72,12 @@
                         <div class="grid-item2">
                             <h4 class="inline-block rounded-lg text-base font-normal text-black-2 py-[10px] md:py-2 lg:py-[10px] px-4 md:px-3 lg:px-4 bg-[#1111110D]">
                                 <img class="inline-block mr-1" src="images/dollar2.png" alt="image">
-                                <p class="inline-block"><span>0</span> BDT</p>
+                                <p class="inline-block"><span id="flood1-amount">0</span> BDT</p>
                             </h4>
                             <h4 class="text-xl md:text-base lg:text-xl font-bold my-4 md:my-3 lg:my-4">Donate for Flood at Noakhali, Bangladesh</h4>
                             <p class="text-base md:text-sm lg:text-base lg:leading-[26px] text-black-1 font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                             <form>
-                                <input class="w-full rounded-lg border border-[#1111111A] h-14 md:h-12 lg:h-14 md:text-sm lg:text-base px-[18px] text-base font-light mt-6 mb-4 md:mt-4 lg:mt-6 md:mb-3 lg:mb-4" type="tel" name="tel" id="" placeholder="Write Donation Amount" required>
+                                <input class="w-full rounded-lg border border-[#1111111A] h-14 md:h-12 lg:h-14 md:text-sm lg:text-base px-[18px] text-base font-light mt-6 mb-4 md:mt-4 lg:mt-6 md:mb-3 lg:mb-4" type="tel" name="tel" id="donation-input1" placeholder="Write Donation Amount" required>
                                 <button id="donate-button1" class="btn text-xl md:text-base lg:text-xl font-semibold w-full text-center h-14 md:h-10 lg:h-14 bg-[#B4F461] hover:bg-[#b1df75] rounded-lg">Donate Now</button>
                             </form>
                         </div>
@@ -128,6 +128,19 @@
                     </div>
                 </div>
             </section>
+            <!-- congrats-section -->
+            <div id="congrats-section" class="hidden">
+                <div class="congrats-div fixed top-0 left-0 w-full h-full bg-[rgba(0,_0,_0,_0.2)] flex flex-col justify-center items-center">
+                    <div class="congrats-box md:w-[520px] rounded-2xl bg-white py-8 px-6 text-center"> 
+                        <!-- top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -->
+                        <h2 class="text-4xl font-bold">Congrats !</h2>
+                        <img class="inline-block w-12 my-4" src="images/dollar.png" alt="image">
+                        <p class="text-base text-black-2 font-normal">You Have Donated for Humankind</p>
+                        <h3 class="text-xl font-bold my-4">Successfully</h3>
+                        <button id="close-info-btn1" class="btn bg-[#F2F2F2] text-base text-black-2">close information</button>
+                    </div>
+                </div>
+            </div>
         </article>
     </main>
 
