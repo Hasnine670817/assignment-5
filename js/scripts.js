@@ -76,3 +76,45 @@ document.getElementById('donate-button1').addEventListener('click', function(eve
     
     
 });
+
+
+
+// flood-2 donate calculation
+document.getElementById('donate-button2').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const userTotalAmount = innerTextValueId('user-total-amount');
+    let donationInput2 = inputValueId('donation-input2');
+    const flood2Amount = innerTextValueId('flood2-amount');
+
+    // If the input is empty or not a valid amount
+    if (isNaN(donationInput2) || donationInput2 < 1) {
+        alert("Please enter a valid amount");
+        return;
+    }
+
+    // If the amount becomes more than the total amount
+    if (userTotalAmount < donationInput2) {
+        alert("You don't have enough money");
+        return;
+    }
+
+    // Calculate donateFlood2
+    const donateForFlood2 = flood2Amount + donationInput2;
+    document.getElementById('flood2-amount').innerText = donateForFlood2;
+    
+    // Calculate totalAmount
+    const newUserTotalAmount = userTotalAmount - donationInput2;
+    document.getElementById('user-total-amount').innerText = newUserTotalAmount;
+
+    const congratsSection = document.getElementById('congrats-section');
+    congratsSection.classList.remove('hidden');
+
+    const closeInfoButtons = document.getElementById('close-info-btn1');
+    closeInfoButtons.addEventListener('click', function() {
+        congratsSection.classList.add('hidden');
+    });
+    
+    
+});
+
