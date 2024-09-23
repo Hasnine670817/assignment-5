@@ -1,3 +1,7 @@
+// blog-btn click
+document.getElementById('blog-btn').addEventListener('click', function() {
+    window.location.href = 'blog.html';
+});
 
 
 // addEventListener for 'history' button

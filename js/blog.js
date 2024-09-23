@@ -1,3 +1,9 @@
+// home-btn click 
+document.getElementById('home-btn').addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
+
+
 
 
 document.getElementById('acc-title1').addEventListener('click', function() {
